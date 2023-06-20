@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Розгалужений обчислювальний процес</title>
+    <script>
+        window.onload = function () {
+            var xMin = parseFloat(prompt("Введіть мінімальне значення аргументу x:"));
+            var xMax = parseFloat(prompt("Введіть максимальне значення аргументу x:"));
+            var step = parseFloat(prompt("Введіть крок зміни значень аргументу:"));
+
+            var x = xMin;
+            var output = document.getElementById("output");
+            output.innerHTML += "x\t\t  f(x)<br/>";
+            while (x <= xMax) {
+                var fx;
+
+                if (x < 2) {
+                    fx = Math.sin(x) + Math.cos(x)
+                } else if (x == 2) {
+                    fx = Math.pow(x, 4.1);
+                } else {
+                    fx = Math.log(x) + Math.sqrt(x);
+                }
+
+                output.innerHTML += x.toFixed(2) + "\t\t" + fx.toFixed(2) + "<br/>";
+                x += step;
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <div id="output"></div>
+</body>
+
+</html>

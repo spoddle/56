@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Математичні функції й константи</title>
+    <script>
+        window.onload = function () {
+            // КОНСТАНТИ
+            var e = Math.E;
+            var pi = Math.PI;
+            var logE = Math.LN10;
+            var log2E = Math.LOG2E;
+            var ln10 = Math.log(10);
+            var ln2 = Math.log(2);
+            var sqrt2 = Math.SQRT2;
+            var sqrt1_2 = Math.SQRT1_2;
+
+            // ФУНКЦІЇ
+            var sqrt4 = Math.sqrt(4);
+            var sqrtNegative9 = Math.sqrt(-9);
+            var absoluteNegative9 = Math.abs(-9);
+            var cosineZero = Math.cos(0);
+            var cosine180 = Math.cos(Math.PI);
+
+            // ГЕНЕРАТОР ВИПАДКОВИХ ЧИСЕЛ
+            var randomNum = Math.random();
+
+
+
+            // Вивід результатів
+            var output = document.getElementById("output");
+            output.innerHTML = "КОНСТАНТИ:<br/>";
+            output.innerHTML += "1. Значення константи е = " + e + "<br/>";
+            output.innerHTML += "2. Значення константи π = " + pi + "<br/>";
+            output.innerHTML += "3. Десятковий логарифм постійної Ейлера (е) = " + logE + "<br/>";
+            output.innerHTML += "4. Двійковий логарифм постійної Ейлера (е) = " + log2E + "<br/>";
+            output.innerHTML += "5. Натуральний логарифм числа 10 = " + ln10 + "<br/>";
+            output.innerHTML += "6. Натуральний логарифм числа 2 = " + ln2 + "<br/>";
+            output.innerHTML += "7. Корінь квадратний із двох = " + sqrt2 + "<br/>";
+            output.innerHTML += "8. Корінь квадратний з однієї другої = " + sqrt1_2 + "<br/><br/>";
+            output.innerHTML += "ФУНКЦІЇ:<br/>";
+            output.innerHTML += "2. Результат добування квадратного кореня з 4: y = " + sqrt4 + "<br/>";
+            output.innerHTML += "3. Результат добування квадратного кореня з -9: y = " + sqrtNegative9 + "<br/>";
+            output.innerHTML += "4. Результат обчислення модуля |-9|: y = " + absoluteNegative9 + "<br/>";
+            output.innerHTML += "5. Результат обчислення косинуса нуля радіан: y = " + cosineZero + "<br/>";
+            output.innerHTML += "6. Косинус 180 градусів (π радіан): y = " + cosine180 + "<br/>" + "<br/>";
+
+            // Вивід результату рандомних чисел
+            var output = document.getElementById("output");
+            output.innerHTML += "ГЕНЕРАТОР ВИПАДКОВИХ ЧИСЕЛ:<br />";
+            output.innerHTML += "Формування випадкових чисел в інтервалі [0;1]: y = " + randomNum + "<br />";
+        }
+    </script>
+</head>
+
+<body>
+    <div id="output"></div>
+</body>
+
+</html>

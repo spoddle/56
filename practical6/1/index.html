@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Кольори фону</title>
+
+</head>
+
+<body>
+    <h2>Виберіть колір фону:</h2>
+    <select id="colorSelect" onchange="changeBackground()">
+        <option value="blue">Синій</option>
+        <option value="white">Білий</option>
+        <option value="yellow">Жовтий</option>
+    </select>
+    
+    <script>
+        function changeBackground() {
+            var colorSelect = document.getElementById("colorSelect");
+            var selectedColor = colorSelect.value;
+
+            document.body.style.backgroundColor = selectedColor;
+        }
+    </script>
+</body>
+
+</html>

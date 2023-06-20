@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Форма для відправлення пошти</title>
+    <script>
+        function sendEmail() {
+            var recipient = document.getElementById('recipient').value;
+            var subject = document.getElementById('subject').value;
+            var body = document.getElementById('body').value;
+
+            var mailtoLink = 'mailto:' + recipient + '?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
+
+            window.location.href = mailtoLink;
+        }
+    </script>
+</head>
+
+<body>
+    <h2>Форма для відправлення пошти</h2>
+    <form>
+        <label for="recipient">Електронна пошта одержувача:</label>
+        <input type="email" id="recipient"><br><br>
+
+        <label for="subject">Тема:</label>
+        <input type="text" id="subject"><br><br>
+
+        <label for="body">Текст повідомлення:</label>
+        <textarea id="body"></textarea><br><br>
+
+        <input type="button" value="Відправити" onclick="sendEmail()">
+    </form>
+</body>
+
+</html>

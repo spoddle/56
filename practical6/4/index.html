@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Реєстрація нового користувача</title>
+    <script>
+        function validateForm() {
+            event.preventDefault(); // Зупинка стандартної поведінки форми (не перенаправляти на нову сторінку)
+            var username = document.getElementById('username').value;
+            var email = document.getElementById('email').value;
+            var password = document.getElementById('password').value;
+            var confirm_password = document.getElementById('confirm_password').value;
+            var first_name = document.getElementById('first_name').value;
+            var last_name = document.getElementById('last_name').value;
+
+            // Перевірка заповненості полів
+            if (username === '' || email === '' || password === '' || confirm_password === '' || first_name === '' || last_name === '') {
+                alert('Будь ласка, заповніть всі поля форми.');
+                return false;
+            }
+
+            // Повідомлення про успішну реєстрацію
+            alert('Ви успішно зареєстровані!');
+            return true;
+        }
+    </script>
+</head>
+
+<body>
+    <h2>Реєстрація нового користувача</h2>
+    <form action="/register" method="POST" onsubmit="return validateForm()">
+        <label for="username">Ім'я користувача:</label><br>
+        <input type="text" id="username" name="username" required><br><br>
+
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <label for="password">Пароль:</label><br>
+        <input type="password" id="password" name="password" required><br><br>
+
+        <label for="confirm_password">Підтвердження паролю:</label><br>
+        <input type="password" id="confirm_password" name="confirm_password" required><br><br>
+
+        <label for="first_name">Ім'я:</label><br>
+        <input type="text" id="first_name" name="first_name" required><br><br>
+
+        <label for="last_name">Прізвище:</label><br>
+        <input type="text" id="last_name" name="last_name" required><br><br>
+
+        <input type="submit" value="Зареєструватися">
+    </form>
+</body>
+
+</html>

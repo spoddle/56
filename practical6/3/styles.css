@@ -1,0 +1,13 @@
+body{
+   margin: 20% 37%;
+}
+.container{
+    display: flex;
+    align-items: center;
+}
+.containers{
+    margin: 1.3%;
+}
+button{
+    width: 40px;
+}

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Цитати авторів</title>
+</head>
+
+<body>
+    <button id="aitmatov">Овідій</button>
+    <button id="golbach">Д. Байрон</button>
+    <button id="shevchenko">Г. Сковорода</button>
+    <button id="pavlichko">Д. Лихачев</button>
+    <button id="kostenko">Горацій</button>
+
+    <script>
+        document.getElementById("aitmatov").addEventListener("click", function () {
+            displayQuote(" І дим батьківщини солодкий");
+        });
+
+        document.getElementById("golbach").addEventListener("click", function () {
+            displayQuote("Той, хто не любить своєї країни, нічого любити не може");
+        });
+
+        document.getElementById("shevchenko").addEventListener("click", function () {
+            displayQuote("Кожному мила своя сторона. ");
+        });
+
+        document.getElementById("pavlichko").addEventListener("click", function () {
+            displayQuote("Усвідомлена любов до свого народу не поєднується з ненавистю до іншихів");
+        });
+
+        document.getElementById("kostenko").addEventListener("click", function () {
+            displayQuote("Ті, що виїздять за море, міняють небо, а не душу.");
+        });
+
+        function displayQuote(quote) {
+            alert(quote);
+        }
+    </script>
+</body>
+
+</html>

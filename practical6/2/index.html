@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Тестування</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+
+<body>
+    <h1>Тестування таблиці істинності логічного елемента</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th colspan="4">Логічний елемент І-НЕ</th>
+            </tr>
+
+        </thead>
+        <tbody>
+            <tr>
+                <th>Логічний вираз</th>
+                <th>1</th>
+                <th>0</th>
+                <th>Перевірка</th>
+            </tr>
+            <tr>
+                <td>A І-НЕ B</td>
+                <td><input type="radio" name="expression1" value="true"></td>
+                <td><input type="radio" name="expression1" value="false"></td>
+                <td><button onclick="checkAnswer(1)">Перевірити</button></td>
+            </tr>
+            <tr>
+                <td>B І-НЕ A</td>
+                <td><input type="radio" name="expression2" value="true"></td>
+                <td><input type="radio" name="expression2" value="false"></td>
+                <td><button onclick="checkAnswer(2)">Перевірити</button></td>
+            </tr>
+            <tr>
+                <td>B І-НЕ B</td>
+                <td><input type="radio" name="expression2" value="true"></td>
+                <td><input type="radio" name="expression2" value="false"></td>
+                <td><button onclick="checkAnswer(2)">Перевірити</button></td>
+            </tr>
+            <tr>
+                <td>А І-НЕ А</td>
+                <td><input type="radio" name="expression2" value="true"></td>
+                <td><input type="radio" name="expression2" value="false"></td>
+                <td><button onclick="checkAnswer(2)">Перевірити</button></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <script>
+        function checkAnswer(questionNumber) {
+            var selectedOption;
+            if (questionNumber === 1) {
+                selectedOption = document.querySelector('input[name="expression1"]:checked');
+            } else if (questionNumber === 2) {
+                selectedOption = document.querySelector('input[name="expression2"]:checked');
+            }
+            if (selectedOption) {
+                var answer = selectedOption.value;
+                if (questionNumber === 1 && answer === "true") {
+                    alert("Правильно! Цей вираз повертає true.");
+                } else if (questionNumber === 2 && answer === "false") {
+                    alert("Правильно! Цей вираз повертає false.");
+                } else {
+                    alert("Неправильна відповідь. Спробуйте ще раз.");
+                }
+            } else {
+                alert("Будь ласка, оберіть відповідь.");
+            }
+        }
+    </script>
+</body>
+
+</html>
